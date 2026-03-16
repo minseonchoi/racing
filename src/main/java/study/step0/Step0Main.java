@@ -1,4 +1,4 @@
-package study;
+package study.step0;
 
 import java.util.Scanner;
 
