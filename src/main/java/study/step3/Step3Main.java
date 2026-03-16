@@ -3,7 +3,6 @@ package study.step3;
 import study.step3.constant.ConsoleMessage;
 import study.step3.input.InputView;
 import study.step3.model.Game;
-import study.step3.output.OutputMethod;
 
 
 public class Step3Main {
@@ -17,7 +16,7 @@ public class Step3Main {
         Game game = new Game(playerName, carCount, raceCount);
 
         // 실행 및 출력
-        OutputMethod.playGame(game, raceCount);
+        game.playGame(raceCount);
 
         // 게임 끝
         System.out.println(game.getStringName() + ConsoleMessage.GAME_END.getMessage());

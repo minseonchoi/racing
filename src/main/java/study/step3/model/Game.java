@@ -1,15 +1,15 @@
 package study.step3.model;
 
-import study.step3.common.RandomNumber;
+import study.step3.constant.ConsoleMessage;
+import study.step3.output.OutputMethod;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
 public class Game {
     private final PlayerName name;
     private final SetCount setCount;
-    private final List<RacingCar> cars;
+    private final Cars cars;
 
     public Game(String name, int carCount, int raceCount) {
         this(new PlayerName(name), new SetCount(carCount, raceCount));
@@ -22,26 +22,23 @@ public class Game {
     public Game(PlayerName name, SetCount setCount) {
         this.name = name;
         this.setCount = setCount;
-        this.cars = initCars(this.getCarCount());
+        this.cars = new Cars(setCount.getCarCount());
     }
 
-    public void moveAllCars() {
-        for (RacingCar car : this.cars) {
-            car.move(RandomNumber.generateLimitTen());
+    public void playGame(int raceCount) {
+        for (int i = 0; i < raceCount; i++) {
+            System.out.println(ConsoleMessage.START_ROUND.getMessage() + (i + 1));
+            if (i == raceCount - 1) {
+                System.out.println(ConsoleMessage.EXECUTION_RESULT.getMessage());
+            }
+            cars.moveCars();
+            OutputMethod.printRacingCarPositions(this);
+            System.out.println();
         }
-    }
-
-    // 입력받은 자동차 수만큼 RacingCar 객체를 생성
-    private List<RacingCar> initCars(int count) {
-        List<RacingCar> carList = new ArrayList<>();
-        for (int i = 0; i < count; i++) {
-            carList.add(new RacingCar());
-        }
-        return carList;
     }
 
     public List<RacingCar> getCars() {
-        return this.cars;
+        return this.cars.getCars();
     }
 
     public String getStringName() {

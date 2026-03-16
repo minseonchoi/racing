@@ -15,16 +15,4 @@ public class OutputMethod {
             );
         }
     }
-
-    public static void playGame(Game game, int raceCount) {
-        for (int i = 0; i < raceCount; i++) {
-            System.out.println(ConsoleMessage.START_ROUND.getMessage() + (i + 1));
-            if (i == raceCount - 1) {
-                System.out.println(ConsoleMessage.EXECUTION_RESULT.getMessage());
-            }
-            game.moveAllCars();
-            OutputMethod.printRacingCarPositions(game);
-            System.out.println();
-        }
-    }
 }
