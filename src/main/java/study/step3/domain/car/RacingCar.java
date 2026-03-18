@@ -4,7 +4,7 @@ import study.step3.common.RandomNumber;
 
 public class RacingCar {
     private static final int FORWARD_CONDITION = 4;
-    private int position = 0;
+    private CarPosition position = new CarPosition();
     private CarName carName;
 
     public RacingCar(String name) {
@@ -17,7 +17,7 @@ public class RacingCar {
 
     public void move(int randomNumber) {
         if (isForwardCondition(randomNumber)){
-            this.position++;
+            this.position.move();
         }
     }
 
@@ -26,7 +26,7 @@ public class RacingCar {
     }
 
     public int getPosition() {
-        return this.position;
+        return this.position.getPosition();
     }
 
     public String getCarName() {
