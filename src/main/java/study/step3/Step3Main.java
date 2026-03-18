@@ -12,10 +12,9 @@ import static study.step3.common.StringUtils.splitByComma;
 public class Step3Main {
     public static void main(String[] args) {
         // 게임 시작
-        ArrayList<String> carNames = splitByComma(InputView.getCarName());
         Game game = new Game(
                 InputView.getPlayerName(),
-                carNames,
+                splitByComma(InputView.getCarName()),
                 InputView.getRaceCount()
         );
 

@@ -12,10 +12,9 @@ public class ResultView {
 
     public static void printRacingCarPositions(Game game) {
         for (RacingCar car : game.getCars()) {
-            System.out.println(
-                    ConsoleMessage.CAR_POSITION_MARK.getMessage()
-                            .repeat(car.getPosition())
-            );
+            String carNamePart = ConsoleMessage.CAR_NAME.getFormatMessage(car.getCarName());
+            String carPositionPart = ConsoleMessage.CAR_POSITION_MARK.getMessage().repeat(car.getPosition());
+            System.out.println(carNamePart + carPositionPart);
         }
 
         System.out.println();
