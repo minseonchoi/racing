@@ -7,14 +7,21 @@ public enum ConsoleMessage {
     EXECUTION_RESULT("Race Result"),
     CAR_POSITION_MARK("-"),
     START_ROUND("Start Round: "),
-    GAME_END("'s Game Over!");
+    GAME_END("'s Game Over!"),
+    INPUT_CAR_NAME("Please enter the names of the cars for the race, separated by commas."),
+    CAR_NAME("%s : ");
 
     private final String message;
 
     ConsoleMessage(String message) {
         this.message = message;
     }
+
     public String getMessage() {
         return this.message;
+    }
+
+    public String getFormatMessage(Object... args) {
+        return String.format(this.message, args);
     }
 }
