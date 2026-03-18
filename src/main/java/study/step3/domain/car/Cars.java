@@ -1,6 +1,4 @@
-package study.step3.model;
-
-import study.step3.common.RandomNumber;
+package study.step3.domain.car;
 
 import java.util.ArrayList;
 import java.util.List;

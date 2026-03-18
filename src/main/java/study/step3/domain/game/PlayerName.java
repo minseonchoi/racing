@@ -1,4 +1,4 @@
-package study.step3.model;
+package study.step3.domain.game;
 
 public class PlayerName {
     private String name;

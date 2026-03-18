@@ -3,6 +3,7 @@ package study.step3;
 import study.step3.constant.ConsoleMessage;
 import study.step3.input.InputView;
 import study.step3.model.Game;
+import study.step3.domain.game.Game;
 
 
 public class Step3Main {

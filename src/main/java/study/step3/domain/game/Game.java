@@ -1,7 +1,9 @@
-package study.step3.model;
+package study.step3.domain.game;
 
 import study.step3.constant.ConsoleMessage;
 import study.step3.output.OutputMethod;
+import study.step3.domain.car.Cars;
+import study.step3.domain.car.RacingCar;
 
 import java.util.List;
 import java.util.Objects;

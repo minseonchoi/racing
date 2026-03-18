@@ -4,6 +4,8 @@ import org.junit.jupiter.api.Test;
 import study.step3.common.RandomNumber;
 import study.step3.model.Game;
 import study.step3.model.PlayerName;
+import study.step3.domain.game.Game;
+import study.step3.domain.game.PlayerName;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

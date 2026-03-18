@@ -2,6 +2,8 @@ package study.step3;
 
 import org.junit.jupiter.api.Test;
 import study.step3.model.RacingCar;
+import study.step3.domain.car.Cars;
+import study.step3.domain.car.RacingCar;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
