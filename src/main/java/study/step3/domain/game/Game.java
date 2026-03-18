@@ -4,7 +4,7 @@ import study.step3.domain.car.Cars;
 import study.step3.domain.car.RacingCar;
 import study.step3.output.ResultView;
 
-import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public class Game {
@@ -12,15 +12,15 @@ public class Game {
     private final SetCount setCount;
     private final Cars cars;
 
-    public Game(String name, ArrayList<String> carNameList, int raceCount) {
+    public Game(String name, List<String> carNameList, int raceCount) {
         this(new PlayerName(name), new SetCount(carNameList.size(), raceCount), carNameList);
     }
 
-    public Game(PlayerName name, ArrayList<String> carNameList, int raceCount) {
+    public Game(PlayerName name, List<String> carNameList, int raceCount) {
         this(name, new SetCount(carNameList.size(), raceCount), carNameList);
     }
 
-    public Game(PlayerName name, SetCount setCount, ArrayList<String> carNameList) {
+    public Game(PlayerName name, SetCount setCount, List<String> carNameList) {
         this.name = name;
         this.setCount = setCount;
         this.cars = new Cars(carNameList);
@@ -38,11 +38,11 @@ public class Game {
         }
     }
 
-    public ArrayList<String> getWinners() {
+    public List<String> getWinners() {
         return this.cars.findWinners();
     }
 
-    public ArrayList<RacingCar> getCars() {
+    public List<RacingCar> getCars() {
         return this.cars.getCars();
     }
 

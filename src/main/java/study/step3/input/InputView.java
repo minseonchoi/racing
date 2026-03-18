@@ -4,6 +4,7 @@ import study.step3.constant.ConsoleMessage;
 import study.step3.constant.ErrorMessage;
 import study.step3.domain.car.CarName;
 
+import java.util.List;
 import java.util.Scanner;
 
 import static study.step3.common.StringUtils.splitByComma;
@@ -19,8 +20,7 @@ public class InputView {
         return getStringInput(ConsoleMessage.INPUT_PLAYER_NAME.getMessage());
     }
 
-    public static String getCarName() {
-        return getStringInput(ConsoleMessage.INPUT_CAR_NAME.getMessage());
+    public static List<String> getCarName() {
         return getCarNamesWithValidation();
     }
 

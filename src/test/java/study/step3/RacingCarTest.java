@@ -43,7 +43,7 @@ public class RacingCarTest {
         car2.move(4);
         car3.move(2);
 
-        int maxPosition = Cars.findMaxPosition(new ArrayList<>(List.of(car1, car2, car3)));
+        int maxPosition = Cars.findMaxPosition(List.of(car1, car2, car3));
         assertThat(maxPosition).isEqualTo(2);
     }
 

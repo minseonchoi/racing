@@ -4,8 +4,7 @@ import study.step3.constant.ConsoleMessage;
 import study.step3.domain.game.Game;
 import study.step3.domain.car.RacingCar;
 
-import java.awt.*;
-import java.util.ArrayList;
+import java.util.List;
 
 
 public class ResultView {
@@ -34,7 +33,7 @@ public class ResultView {
         System.out.println(game.getStringName() + ConsoleMessage.GAME_END.getMessage());
     }
 
-    public static void printWinners(ArrayList<String> winners) {
+    public static void printWinners(List<String> winners) {
         System.out.println(String.join(", ", winners) + " won the race.");
     }
 }
