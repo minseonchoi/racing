@@ -14,7 +14,7 @@ public class Step3Main {
         // 게임 시작
         Game game = new Game(
                 InputView.getPlayerName(),
-                splitByComma(InputView.getCarName()),
+                InputView.getCarName(),
                 InputView.getRaceCount()
         );
 
