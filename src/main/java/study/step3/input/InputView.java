@@ -15,8 +15,8 @@ public class InputView {
         return getStringInput(ConsoleMessage.INPUT_PLAYER_NAME.getMessage());
     }
 
-    public static int getCarCount() {
-        return getPositiveIntInput(ConsoleMessage.INPUT_CAR_COUNT.getMessage());
+    public static String getCarName() {
+        return getStringInput(ConsoleMessage.INPUT_CAR_NAME.getMessage());
     }
 
     public static int getRaceCount() {

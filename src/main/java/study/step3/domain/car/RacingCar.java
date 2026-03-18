@@ -28,4 +28,8 @@ public class RacingCar {
     public int getPosition() {
         return this.position;
     }
+
+    public String getCarName() {
+        return this.carName.getName();
+    }
 }

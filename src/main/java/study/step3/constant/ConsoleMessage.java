@@ -7,7 +7,8 @@ public enum ConsoleMessage {
     EXECUTION_RESULT("Race Result"),
     CAR_POSITION_MARK("-"),
     START_ROUND("Start Round: "),
-    GAME_END("'s Game Over!");
+    GAME_END("'s Game Over!"),
+    INPUT_CAR_NAME("Please enter the names of the cars for the race, separated by commas.");
 
     private final String message;
 
